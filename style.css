@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --civ-dark: #07101A; /* Very deep navy blue */
+    --civ-panel: rgba(14, 25, 38, 0.95);
+    --civ-gold: #D4AF37;
+    --civ-gold-light: #FCECAE;
+    --civ-gold-dark: #8A6327;
+    --civ-border: #4a3c25;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Civ 6 Blue Map Background: Uses deep color, radial gradient, and noisy svg texture */
+.parchment-bg {
+    background-color: #071221;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+        radial-gradient(circle at 40% 30%, rgba(16, 38, 70, 0.6) 0%, rgba(4, 8, 15, 0.9) 100%);
+    background-attachment: fixed;
+    background-blend-mode: overlay, normal;
+}
+
+/* Color Utilities */
+.text-gold { color: var(--civ-gold); }
+.text-light-gold { color: var(--civ-gold-light); }
+.text-parchment { color: #e6daca; }
+.text-civ-dark { color: #2A1F13; }
+.bg-gold { background-color: var(--civ-gold); }
+.bg-civ-dark { background-color: var(--civ-dark); }
+.border-gold { border-color: var(--civ-gold); }
+.border-light-gold { border-color: rgba(212, 175, 55, 0.4); }
+
+/* Typography */
+.font-cinzel { 
+    font-family: 'Cinzel', serif; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
+}
+.font-cormorant { 
+    font-family: 'Cormorant Garamond', serif; 
+}
+.text-civ-dark.font-cinzel { 
+    text-shadow: none; 
+    font-weight: 700; 
+}
+
+/* Navigation */
+.civ-nav {
+    background: linear-gradient(to bottom, #050a12, #0A1624);
+    border-bottom: 2px solid var(--civ-gold-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+
+/* Base Panel */
+.civ-panel {
+    background-color: var(--civ-panel);
+    border: 2px solid var(--civ-border);
+    border-radius: 4px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 25px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+
+.civ-panel:hover {
+    border-color: var(--civ-gold);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 0 25px 5px rgba(212, 175, 55, 0.4);
+}
+
+/* Cards */
+.civ-card {
+    background: linear-gradient(135deg, #0d1a29, #07101A);
+    border: 1px solid var(--civ-border);
+    border-top: 2px solid var(--civ-gold-dark);
+    box-shadow: 3px 6px 15px rgba(0,0,0,0.6);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.civ-card:hover {
+    border-top-color: var(--civ-gold);
+    border-bottom-color: var(--civ-gold);
+    box-shadow: 0 0 20px 4px rgba(212, 175, 55, 0.5);
+    transform: translateY(-6px);
+}
+
+/* Portrait */
+.civ-portrait-container {
+    padding: 6px;
+    background: var(--civ-dark);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0,0,0,0.9);
+    transition: all 0.5s ease;
+}
+.portrait-ring {
+    position: absolute;
+    inset: 0;
+    border: 3px solid var(--civ-gold-dark);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.civ-portrait-container:hover .portrait-ring {
+    border-color: var(--civ-gold-light);
+    box-shadow: inset 0 0 15px var(--civ-gold), 0 0 30px var(--civ-gold);
+}
+
+/* Logo Rings & Rectangles Container */
+.civ-logo-ring {
+    border: 2px solid var(--civ-gold-dark);
+    background-color: #faf8f5;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+.civ-card:hover .civ-logo-ring {
+    border-color: var(--civ-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+
+.civ-logo-rect {
+    border: 2px solid var(--civ-border);
+    background-color: #fff;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+.civ-panel:hover .civ-logo-rect {
+    border-color: var(--civ-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+/* Next Turn Button */
+.next-turn-btn {
+    background: radial-gradient(circle at 35% 35%, #152A42, #070F1A);
+    border: 4px solid var(--civ-gold-dark);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.8), 0 6px 20px rgba(0,0,0,0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.next-turn-btn:hover {
+    background: radial-gradient(circle at 50% 50%, #1A3451, #0A1624);
+    border-color: var(--civ-gold);
+    box-shadow: 0 0 30px 8px rgba(212, 175, 55, 0.6);
+    transform: scale(1.1);
+}
+
+.next-turn-btn::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--civ-gold-light);
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.next-turn-btn:hover::after {
+    opacity: 0.8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #0d1a29; 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--civ-gold-dark); 
+    border-radius: 6px;
+    border: 3px solid #0d1a29;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--civ-gold); 
+}

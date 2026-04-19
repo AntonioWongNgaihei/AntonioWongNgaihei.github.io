@@ -1,0 +1,74 @@
+HUANG WEIXI
+HP: +65 83460501 | Email: weixihuang@u.nus.edu
+EDUCATION
+NATIONAL UNIVERSITY OF SINGAPORE Aug 2024 - May 2028
+BACHELOR OF SCIENCE (HONS)
+Major in Physics, minor in Mathematics
+ 
+RESEARCH EXPERIENCE
+Centre for Quantum Technologies, Singapore, UROPS Project Jan 2026 - Present
+Supervisor: Prof. Dzmitry Matsukevich
+Designed a compact (25 × 50 cm) and modular optical breadboard for stabilising a 369 nm laser used 
+in trapped ion (Yb+) quantum computing.
+Optimised optical layout using PyOpticL to minimise footprint while preserving optical performance.
+Aligned optical setup on vibration-isolated optical table for stable beam propagation and cavity 
+coupling.
+Processed cavity error signals and implemented feedback control for laser locking.
+ 
+Astar Q.InC, Research Assistant Aug 2025 - Nov 2025
+Supervisor: Dr. Aaron Lau
+Gained hands-on experience in micro/nanofabrication processes, including laser lithography, 
+Nanofrazor, metal deposition, and liftoff techniques for 2D material-based devices. 
+Gained understanding of complete device fabrication workflow from material growth/transfer to 
+electrode definition and characterization.
+Optimized the PPC-based lithography and plasma etching process for 2D material devices, resulting in 
+much cleaner device interfaces compared to conventional PMMA-based methods.
+ 
+NUS Department of Physics, Research Assistant Jan 2025 - Oct 2025
+Supervisor: Dr. Haydar Sahin
+Studied new topological circuits with memristor emulator under guidance of Prof. Lee Ching Hua and 
+Dr. Haydar Sahin, to build a robust circuits which can memorize the topological phase of the circuits.
+Gained experience on literature review and using LTspice and Python to simulate physical models.
+ 
+Guangzhou Fiber Products Testing and Research Institute, Research 
+ParticipantJul 2022 - Dec 2022
+Supervisor: Dr. Luo Jun
+Collaborated with senior engineer Dr. Luo Jun to advance the biodegradable plastic film testing system 
+for agricultural applications.
+Conducted mechanical performance and moisture permeability tests, achieving a 20% reduction in test 
+cycle time.
+Validated experimental methodologies, improving data reliability and reporting.
+Developed literature review frameworks and research plans, ensuring efficient information synthesis.
+ 
+PROFESSIONAL EXPERIENCE
+Institute of Special Equipment Inspection and Research, Intern 
+EngineerJul 2025
+Developed proficiency in the ability to write experimental reports and test reports.
+Assisted in designing research methodologies and protocols.
+ Gained insight into the graphene testing process and familiarized with Raman spectroscopy, AFM, 
+and XRD operations.
+ 
+EXPERIENCE
+Guangdong-Hong Kong-Macau Institute of CNS Regeneration, Jun 2023Academic Visit
+ Engaged in research and study exchange activities at prominent research institutes, including the 
+Guangdong-Hong Kong-Macau Institute of CNS Regeneration. 
+ Received guidance from Dr Martin G Banwell, a fellow of the Australian Academy of Science.  
+ 
+LEADERSHIP EXPERIENCE
+Organiser, Donation of Masks to Medical Institutions Sep 2021
+  Led a fundraising initiative to procure and distribute 2,000 medical masks to hospitals during the 
+COVID-19 crisis.
+  Coordinated logistics to ensure timely delivery to the Second Affiliated Hospital of Nanchang 
+University and Central Hospital of Suizhou City.
+ 
+VOLUNTEER EXPERIENCE
+ Dedicated over 187 hours to community service initiatives, impacting public health, education, and 
+environmental projects.
+ 
+KEY SKILLS
+Programming Languages: Python (data analysis, scripting, automation), Mathematica, R
+Engineering Skills: LTspice, CAD drawing, Pyopticl
+Laboratory Techniques: Experimental Design, Data Analysis, Cleanroom fabrication for materials and 
+devices, Optical table setup and alignment
+Soft Skills: Leadership, Communication, Team Collaboration
+Language: Mandarin, Cantonese, English

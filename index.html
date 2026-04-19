@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weixi Huang - Personal Page</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'civ-dark': '#07101A',
+                        'gold': '#D4AF37',
+                        'light-gold': '#FCECAE',
+                        'gold-dark': '#8A6327',
+                        'parchment': '#e6daca',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="parchment-bg antialiased min-h-screen flex flex-col items-center overflow-x-hidden">
+
+    <!-- Desktop Navigation / Mobile Top Bar -->
+    <nav class="civ-nav w-full z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-4">
+                    <!-- Left logo/name removed -->
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-cinzel text-gold text-sm tracking-widest">
+                        <a href="#about" class="hover:text-light-gold transition duration-300">Leader Trait</a>
+                        <a href="#education" class="hover:text-light-gold transition duration-300">Education</a>
+                        <a href="#experience" class="hover:text-light-gold transition duration-300">Experience</a>
+                        <a href="#hobbies" class="hover:text-light-gold transition duration-300">Natural Wonders</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gold hover:text-light-gold focus:outline-none transition">
+                        <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-civ-dark border-t border-gold-dark opacity-95">
+            <div class="px-2 pt-2 pb-3 space-y-1 font-cinzel tracking-wider text-center">
+                <a href="#about"
+                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Leader
+                    Trait</a>
+                <a href="#education"
+                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Education</a>
+                <a href="#experience"
+                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Experience</a>
+                <a href="#hobbies"
+                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Natural
+                    Wonders</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 w-full flex-grow space-y-24">
+
+        <!-- Leader Trait Section -->
+        <section id="about" class="scroll-mt-24">
+            <div class="civ-panel p-8 md:p-12 relative flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 relative civ-portrait-container group">
+                    <img src="photo.jpg" alt="Weixi Huang" class="w-full h-full object-cover rounded-full civ-portrait">
+                    <div class="portrait-ring"></div>
+                </div>
+
+                <div class="flex-grow space-y-6">
+                    <h1
+                        class="font-cinzel text-3xl md:text-5xl text-gold border-b-2 border-light-gold pb-4 inline-block leading-tight">
+                        Vince Huang Weixi<br><span class="text-2xl md:text-4xl opacity-80 mt-3 block">（Antonio Wong Ngai
+                            Hei）</span></h1>
+                    <div class="font-cormorant text-lg md:text-xl text-parchment leading-relaxed space-y-4">
+                        <p class="first-letter:font-cinzel first-letter:text-6xl md:first-letter:text-7xl first-letter:font-bold first-letter:text-gold first-letter:float-left first-letter:pr-3 first-letter:-mt-1 first-letter:leading-[0.8]">
+                            I am a second-year Physics student at the National University of Singapore (NUS), driven by
+                            the potential of translating fundamental quantum phenomena into scalable technologies.
+                            Currently, as a Research Assistant at the Centre for Quantum Technologies (CQT), I
+                            specialize in the engineering of modular optical systems for laser frequency stabilization—a
+                            critical component for trapped-ion ($Yb^+$) quantum computing.
+                        </p>
+                        <p>
+                            My expertise bridges the gap between theoretical modeling and high-precision experimental
+                            physics. Whether I am optimizing optical layouts using PyOpticL, fabricating 2D material
+                            devices in the cleanrooms of A*STAR, or simulating topological circuits in Python, I aim to
+                            build the hardware foundations required for the next generation of quantum information
+                            processing.
+                        </p>
+                        <p>
+                            Beyond the lab, I am a dedicated birdwatching enthusiast and have previously led
+                            conservation-focused student organizations, a passion that keeps me grounded in the
+                            intricate patterns of the natural world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Background Section -->
+        <section id="education" class="scroll-mt-24 space-y-12">
+            <div class="flex items-center gap-4 justify-center">
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
+                    Educational Background</h2>
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- GDSYZX -->
+                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
+                    <div
+                        class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring flex items-center justify-center">
+                        <img src="gdsyzx_logo.jpg" alt="GDSYZX Logo" class="object-contain w-full h-full scale-[1.3]">
+                    </div>
+                    <h3 class="font-cinzel text-xl md:text-2xl text-gold leading-snug">Guangdong Experimental High
+                        School<br><span class="text-sm tracking-normal opacity-80">(广东实验中学)</span></h3>
+                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
+                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2018.09 - 2024.05</p>
+                </div>
+
+                <!-- NUS -->
+                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
+                    <div
+                        class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring flex items-center justify-center">
+                        <img src="nus_logo.jpg" alt="NUS Logo" class="object-contain w-full h-full scale-[1.3]">
+                    </div>
+                    <h3 class="font-cinzel text-xl md:text-2xl text-gold">National University of Singapore</h3>
+                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
+                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2024.08 - 2028.05</p>
+                    <p class="font-cormorant text-parchment text-lg leading-relaxed">Bachelor of Science (Hons)<br>Major
+                        in Physics, Minor in Mathematics</p>
+                </div>
+
+                <!-- Cornell -->
+                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
+                    <div class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring">
+                        <img src="cornell_logo.jpg" alt="Cornell Logo" class="object-contain w-full h-full">
+                    </div>
+                    <h3 class="font-cinzel text-xl md:text-2xl text-gold">Cornell University</h3>
+                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
+                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2026.08 - 2026.12</p>
+                    <p class="font-cormorant text-parchment text-lg leading-relaxed">Academic Exchange Program</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="scroll-mt-24 space-y-12">
+            <div class="flex items-center gap-4 justify-center">
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
+                    Research Experience</h2>
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- CQT -->
+                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
+                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
+                        <img src="cqt_logo.png" alt="CQT Logo" class="object-contain w-full h-full">
+                    </div>
+                    <div class="flex-grow space-y-3">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
+                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">Centre for Quantum Technologies (CQT)
+                            </h3>
+                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Jan 2026
+                                - Present</span>
+                        </div>
+                        <p class="font-cinzel text-light-gold text-lg md:text-xl">UROPS Project | Supervisor: Prof.
+                            Dzmitry Matsukevich</p>
+                        <ul
+                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
+                            <li>Designed a compact (25 × 50 cm) and modular optical breadboard for stabilising a 369 nm
+                                laser used in trapped ion ($Yb^+$) quantum computing.</li>
+                            <li>Optimised optical layout using PyOpticL to minimise footprint while preserving optical
+                                performance.</li>
+                            <li>Aligned optical setup on vibration-isolated optical table for stable beam propagation
+                                and cavity coupling.</li>
+                            <li>Processed cavity error signals and implemented feedback control for laser locking.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- A*STAR -->
+                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
+                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
+                        <img src="astar_logo.jpg" alt="A*STAR Logo" class="object-contain w-full h-full">
+                    </div>
+                    <div class="flex-grow space-y-3">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
+                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">A*STAR Q.InC</h3>
+                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Aug 2025
+                                - Nov 2025</span>
+                        </div>
+                        <p class="font-cinzel text-light-gold text-lg md:text-xl">Research Assistant | Supervisor: Dr.
+                            Aaron Lau</p>
+                        <ul
+                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
+                            <li>Gained hands-on experience in micro/nanofabrication processes, including laser
+                                lithography, Nanofrazor, metal deposition, and liftoff techniques for 2D material-based
+                                devices.</li>
+                            <li>Gained understanding of complete device fabrication workflow from material
+                                growth/transfer to electrode definition and characterization.</li>
+                            <li>Optimized the PPC-based lithography and plasma etching process for 2D material devices,
+                                resulting in much cleaner device interfaces compared to conventional PMMA-based methods.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NUS Physics -->
+                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
+                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
+                        <img src="nus_logo.jpg" alt="NUS Logo" class="object-contain w-full h-full">
+                    </div>
+                    <div class="flex-grow space-y-3">
+                        <div
+                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
+                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">NUS Department of Physics</h3>
+                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Jan 2025
+                                - Oct 2025</span>
+                        </div>
+                        <p class="font-cinzel text-light-gold text-lg md:text-xl">Research Assistant | Supervisor: Dr.
+                            Haydar Sahin</p>
+                        <ul
+                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
+                            <li>Studied new topological circuits with memristor emulator under guidance of Prof. Lee
+                                Ching Hua and Dr. Haydar Sahin, to build a robust circuits which can memorize the
+                                topological phase of the circuits.</li>
+                            <li>Gained experience on literature review and using LTspice and Python to simulate physical
+                                models.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Natural Wonders Section -->
+        <section id="hobbies" class="scroll-mt-24 space-y-12 pb-24">
+            <div class="flex items-center gap-4 justify-center">
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
+                    Natural Wonders</h2>
+                <div class="h-px bg-gold w-16 md:w-48"></div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="civ-card p-10 space-y-5 max-w-3xl w-full flex flex-col items-center">
+                    <h3 class="font-cinzel text-3xl text-gold border-b-2 border-gold-dark pb-2 inline-block">
+                        Birdwatching</h3>
+                    <p class="font-cormorant text-xl text-parchment leading-relaxed text-justify md:text-center mt-2">
+                        As a dedicated birdwatching enthusiast, I immerse myself in the intricate patterns of the
+                        natural world. Patient observation of nature's delicate mechanisms brings a profound sense of
+                        balance to my scientific pursuits, grounding my understanding of complex systems and finding
+                        rhythm outside the laboratory.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Next Turn Button (Fixed at Bottom Right) -->
+    <div class="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-50">
+        <a href="mailto:weixihuang@u.nus.edu"
+            class="next-turn-btn relative flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-full cursor-pointer">
+            <div class="flex flex-col items-center justify-center z-10 text-center">
+                <span
+                    class="font-cinzel text-gold text-sm md:text-base font-bold tracking-widest leading-tight">CONTACT<br>ME</span>
+                <svg class="w-6 h-6 md:w-8 md:h-8 text-gold mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle script
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const navLinks = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
