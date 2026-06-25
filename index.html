@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weixi Huang - Personal Page</title>
+    <title>Vince Huang Weixi - The Empire</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,7 +15,6 @@
                         'gold': '#D4AF37',
                         'light-gold': '#FCECAE',
                         'gold-dark': '#8A6327',
-                        'parchment': '#e6daca',
                     }
                 }
             }
@@ -25,9 +23,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400..700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -40,288 +36,305 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="parchment-bg antialiased min-h-screen flex flex-col items-center overflow-x-hidden">
+<body class="world-map-bg antialiased min-h-screen flex text-slate-light relative">
 
-    <!-- Desktop Navigation / Mobile Top Bar -->
-    <nav class="civ-nav w-full z-50 sticky top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-4">
-                    <!-- Left logo/name removed -->
-                </div>
-                <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8 font-cinzel text-gold text-sm tracking-widest">
-                        <a href="#about" class="hover:text-light-gold transition duration-300">About Me</a>
-                        <a href="#education" class="hover:text-light-gold transition duration-300">Education</a>
-                        <a href="#experience" class="hover:text-light-gold transition duration-300">Experience</a>
-                        <a href="#hobbies" class="hover:text-light-gold transition duration-300">Beyond Lab</a>
-                    </div>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gold hover:text-light-gold focus:outline-none transition">
-                        <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-civ-dark border-t border-gold-dark opacity-95">
-            <div class="px-2 pt-2 pb-3 space-y-1 font-cinzel tracking-wider text-center">
-                <a href="#about"
-                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">About Me</a>
-                <a href="#education"
-                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Education</a>
-                <a href="#experience"
-                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Experience</a>
-                <a href="#hobbies"
-                    class="block px-3 py-3 rounded-md text-base font-bold text-gold hover:text-light-gold hover:bg-gray-800 transition">Beyond Lab</a>
-            </div>
-        </div>
-    </nav>
+    <!-- The Leader Photo (Right Side Floating) -->
+    <div class="fixed inset-y-0 right-0 w-1/2 pointer-events-none hidden lg:flex items-end justify-center z-0">
+        <img src="photo.jpg" alt="Leader Portrait" class="leader-fade-mask max-h-[90vh] object-cover 2xl:max-h-[85vh]">
+    </div>
 
-    <main class="max-w-6xl mx-auto px-4 py-16 w-full flex-grow space-y-24">
+    <!-- The Main Content Pillar (Left Side) -->
+    <main class="loading-pillar w-full lg:w-[500px] xl:w-[650px] 2xl:w-[750px] lg:ml-[10%] relative flex flex-col py-16 px-8 md:px-16 space-y-12 shrink-0">
+        
+        <!-- Header -->
+        <header class="text-center space-y-3 z-10 relative">
+            <h2 class="font-cinzel text-sm tracking-[0.2em] text-gray-400 uppercase">National University of Singapore</h2>
+            <h3 class="font-cinzel text-xs tracking-[0.3em] text-gold uppercase pt-1">Joins The World Stage</h3>
+            <div class="loading-divider"></div>
+            <h1 class="font-cinzel text-3xl md:text-5xl text-white tracking-widest leading-tight">VINCE HUANG WEIXI</h1>
+            <h2 class="font-cinzel text-xl text-gold-dark tracking-widest">(Antonio Wong)</h2>
+        </header>
 
-        <!-- Leader Trait Section -->
-        <section id="about" class="scroll-mt-24">
-            <div class="civ-panel p-8 md:p-12 relative flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-                <div class="w-48 h-48 md:w-64 md:h-64 shrink-0 relative civ-portrait-container group">
-                    <img src="photo.jpg" alt="Weixi Huang" class="w-full h-full object-cover rounded-full civ-portrait">
-                    <div class="portrait-ring"></div>
-                </div>
-
-                <div class="flex-grow space-y-6">
-                    <h1
-                        class="font-cinzel text-3xl md:text-5xl text-gold border-b-2 border-light-gold pb-4 inline-block leading-tight">
-                        Vince Huang Weixi<br><span class="text-2xl md:text-4xl opacity-80 mt-3 block">（Antonio Wong Ngai
-                            Hei）</span></h1>
-                    <div class="font-cormorant text-lg md:text-xl text-parchment leading-relaxed space-y-4">
-                        <p class="first-letter:font-cinzel first-letter:text-6xl md:first-letter:text-7xl first-letter:font-bold first-letter:text-gold first-letter:float-left first-letter:pr-3 first-letter:-mt-1 first-letter:leading-[0.8]">
-                            I am a Physics sophomore at the National University of Singapore (NUS), driven by
-                            the potential of translating fundamental quantum phenomena into scalable technologies.
-                            Currently, as a Research Assistant at the Centre for Quantum Technologies (CQT), I
-                            specialize in a UROPS project of modular optical systems for 369nm-laser locker—a
-                            critical component for trapped-ion ($Yb^+$) quantum computing.
-                        </p>
-                        <p>
-                            My expertise bridges the gap between theoretical modeling and high-precision experimental
-                            physics. Whether I am optimizing optical layouts using PyOpticL, fabricating 2D material
-                            devices in the cleanrooms of A*STAR, or simulating topological circuits, I aim to
-                            build the hardware foundations required for the next generation of information
-                            processing.
-                        </p>
-                        <p>
-                            Beyond the lab, I am a dedicated birdwatching enthusiast and have previously led
-                            student organizations, a passion that keeps me grounded in the
-                            intricate patterns of the natural world.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Intro -->
+        <section id="about" class="space-y-4">
+            <p class="font-cormorant text-base md:text-lg text-slate-300 text-justify">
+                <span class="drop-cap text-white">I</span> am a third-year Physics undergraduate at the National University of Singapore (NUS) and an incoming exchange student at Cornell University for Fall 2026. My academic passion lies at the intersection of quantum information and condensed matter physics. I am particularly driven by the challenge of understanding complex quantum phenomena and translating foundational physical theories into scalable quantum technologies.
+            </p>
         </section>
 
-        <!-- Educational Background Section -->
-        <section id="education" class="scroll-mt-24 space-y-12">
-            <div class="flex items-center gap-4 justify-center">
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
-                    Educational Background</h2>
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- GDSYZX -->
-                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
-                    <div
-                        class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring flex items-center justify-center">
-                        <img src="gdsyzx_logo.jpg" alt="GDSYZX Logo" class="object-contain w-full h-full scale-[1.3]">
-                    </div>
-                    <h3 class="font-cinzel text-xl md:text-2xl text-gold leading-snug">Guangdong Experimental High
-                        School<br><span class="text-sm tracking-normal opacity-80">(广东实验中学)</span></h3>
-                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
-                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2018.09 - 2024.05</p>
-                </div>
-
-                <!-- NUS -->
-                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
-                    <div
-                        class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring flex items-center justify-center">
-                        <img src="nus_logo.jpg" alt="NUS Logo" class="object-contain w-full h-full scale-[1.3]">
-                    </div>
-                    <h3 class="font-cinzel text-xl md:text-2xl text-gold">National University of Singapore</h3>
-                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
-                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2024.08 - 2028.05</p>
-                    <p class="font-cormorant text-parchment text-lg leading-relaxed">Bachelor of Science (Hons)<br>Major
-                        in Physics, Minor in Mathematics</p>
-                </div>
-
-                <!-- Cornell -->
-                <div class="civ-card p-8 flex flex-col items-center text-center space-y-5">
-                    <div class="h-28 w-28 rounded-full p-2 overflow-hidden civ-logo-ring">
-                        <img src="cornell_logo.jpg" alt="Cornell Logo" class="object-contain w-full h-full">
-                    </div>
-                    <h3 class="font-cinzel text-xl md:text-2xl text-gold">Cornell University</h3>
-                    <div class="w-full h-px bg-gold-dark opacity-50"></div>
-                    <p class="font-cormorant text-parchment italic opacity-90 text-lg">2026.08 - 2026.12</p>
-                    <p class="font-cormorant text-parchment text-lg leading-relaxed">Academic Exchange Program</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="scroll-mt-24 space-y-12">
-            <div class="flex items-center gap-4 justify-center">
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
-                    Research Experience</h2>
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-            </div>
-
-            <div class="space-y-8">
+        <!-- Features & Abilities (Experience) -->
+        <section id="experience" class="pt-6">
+            <h3 class="font-cinzel text-center text-sm md:text-base tracking-[0.2em] text-white uppercase bg-civ-dark inline-block px-4 relative z-10 mx-auto left-1/2 transform -translate-x-1/2">Research Experience</h3>
+            <div class="loading-divider" style="margin-top: -0.7rem;"></div>
+            
+            <div class="space-y-10 mt-10">
                 <!-- CQT -->
-                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
-                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
-                        <img src="cqt_logo.png" alt="CQT Logo" class="object-contain w-full h-full">
+                <div class="flex items-start gap-5">
+                    <div class="w-16 h-16 shrink-0 rounded-full civ-logo-container flex items-center justify-center p-1">
+                        <img src="cqt_logo.png" alt="CQT" class="w-full h-full object-contain">
                     </div>
-                    <div class="flex-grow space-y-3">
-                        <div
-                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
-                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">Centre for Quantum Technologies (CQT)
-                            </h3>
-                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Jan 2026
-                                - Present</span>
+                    <div>
+                        <h4 class="font-cinzel text-lg text-gold tracking-wide">Centre for Quantum Technologies</h4>
+                        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1">
+                            <p class="font-cinzel text-xs text-gray-400">UROPS Project | Jan 2026 - Present</p>
+                            <span class="text-gold-dark text-xs hidden sm:inline">•</span>
+                            <a href="javascript:void(0)" onclick="showPdfModal('slides.pdf')" class="font-cinzel text-xs text-gold hover:text-light-gold hover:underline transition-all duration-200 flex items-center gap-1">View Details &rarr;</a>
                         </div>
-                        <p class="font-cinzel text-light-gold text-lg md:text-xl">UROPS Project | Supervisor: Prof.
-                            Dzmitry Matsukevich</p>
-                        <ul
-                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
-                            <li>Designed a compact (25 × 50 cm) and modular optical breadboard for stabilising a 369 nm
-                                laser used in trapped ion ($Yb^+$) quantum computing.</li>
-                            <li>Optimised optical layout using PyOpticL to minimise footprint while preserving optical
-                                performance.</li>
-                            <li>Aligned optical setup on vibration-isolated optical table for stable beam propagation
-                                and cavity coupling.</li>
-                            <li>Processed cavity error signals and implemented feedback control for laser locking.</li>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 font-cormorant text-[15px] text-slate-300 marker:text-gold-dark">
+                            <li>Designed a compact (25 × 50 cm) and modular optical breadboard for stabilising a 369 nm laser used in trapped ion ($Yb^+$) quantum computing.</li>
+                            <li>Optimised optical layout using PyOpticL to minimise footprint while preserving optical performance.</li>
+                            <li>Aligned optical setup on vibration-isolated optical table for stable beam propagation and cavity coupling.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- A*STAR -->
-                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
-                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
-                        <img src="astar_logo.jpg" alt="A*STAR Logo" class="object-contain w-full h-full">
+                <div class="flex items-start gap-5">
+                    <div class="w-16 h-16 shrink-0 rounded-full civ-logo-container flex items-center justify-center p-1">
+                        <img src="astar_logo.jpg" alt="ASTAR" class="w-full h-full object-contain rounded-full">
                     </div>
-                    <div class="flex-grow space-y-3">
-                        <div
-                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
-                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">A*STAR Q.InC</h3>
-                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Aug 2025
-                                - Nov 2025</span>
+                    <div>
+                        <h4 class="font-cinzel text-lg text-gold tracking-wide">A*STAR Q.InC</h4>
+                        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1">
+                            <p class="font-cinzel text-xs text-gray-400">Research Assistant | Aug 2025 - Nov 2025</p>
+                            <span class="text-gold-dark text-xs hidden sm:inline">•</span>
+                            <a href="javascript:void(0)" onclick="showNoContentModal()" class="font-cinzel text-xs text-gold hover:text-light-gold hover:underline transition-all duration-200 flex items-center gap-1">View Details &rarr;</a>
                         </div>
-                        <p class="font-cinzel text-light-gold text-lg md:text-xl">Research Assistant | Supervisor: Dr.
-                            Aaron Lau</p>
-                        <ul
-                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
-                            <li>Gained hands-on experience in micro/nanofabrication processes, including laser
-                                lithography, Nanofrazor, metal deposition, and liftoff techniques for 2D material-based
-                                devices.</li>
-                            <li>Gained understanding of complete device fabrication workflow from material
-                                growth/transfer to electrode definition and characterization.</li>
-                            <li>Optimized the PPC-based lithography and plasma etching process for 2D material devices,
-                                resulting in much cleaner device interfaces compared to conventional PMMA-based methods.
-                            </li>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 font-cormorant text-[15px] text-slate-300 marker:text-gold-dark">
+                            <li>Hands-on experience in micro/nanofabrication processes (laser lithography, Nanofrazor, metal deposition, liftoff).</li>
+                            <li>Optimized the PPC-based lithography and plasma etching process for 2D material devices.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- NUS Physics -->
-                <div class="civ-panel p-8 flex flex-col md:flex-row gap-8">
-                    <div class="w-24 h-24 shrink-0 p-2 civ-logo-rect flex items-center justify-center rounded-lg">
-                        <img src="nus_logo.jpg" alt="NUS Logo" class="object-contain w-full h-full">
+                <div class="flex items-start gap-5">
+                    <div class="w-16 h-16 shrink-0 rounded-full civ-logo-container flex items-center justify-center p-1">
+                        <img src="nus_logo.jpg" alt="NUS Physics" class="w-full h-full object-contain rounded-full">
                     </div>
-                    <div class="flex-grow space-y-3">
-                        <div
-                            class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gold-dark pb-3">
-                            <h3 class="font-cinzel text-2xl md:text-3xl text-gold">NUS Department of Physics</h3>
-                            <span class="font-cormorant italic text-parchment opacity-90 text-lg mt-2 md:mt-0">Jan 2025
-                                - Oct 2025</span>
+                    <div>
+                        <h4 class="font-cinzel text-lg text-gold tracking-wide">NUS Department of Physics</h4>
+                        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1">
+                            <p class="font-cinzel text-xs text-gray-400">Research Assistant | Jan 2025 - Oct 2025</p>
+                            <span class="text-gold-dark text-xs hidden sm:inline">•</span>
+                            <a href="javascript:void(0)" onclick="showNoContentModal()" class="font-cinzel text-xs text-gold hover:text-light-gold hover:underline transition-all duration-200 flex items-center gap-1">View Details &rarr;</a>
                         </div>
-                        <p class="font-cinzel text-light-gold text-lg md:text-xl">Research Assistant | Supervisor: Dr.
-                            Haydar Sahin</p>
-                        <ul
-                            class="list-disc list-outside ml-6 font-cormorant text-lg text-parchment space-y-2 pt-2 marker:text-gold">
-                            <li>Studied new topological circuits with memristor emulator under guidance of Prof. Lee
-                                Ching Hua and Dr. Haydar Sahin, to build a robust circuits which can memorize the
-                                topological phase of the circuits.</li>
-                            <li>Gained experience on literature review and using LTspice and Python to simulate physical
-                                models.</li>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 font-cormorant text-[15px] text-slate-300 marker:text-gold-dark">
+                            <li>Studied topological circuits with memristor emulator under Prof. Lee Ching Hua and Dr. Haydar Sahin.</li>
+                            <li>Simulated physical models using Python and LTspice.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Natural Wonders Section -->
-        <section id="hobbies" class="scroll-mt-24 space-y-12 pb-24">
-            <div class="flex items-center gap-4 justify-center">
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-                <h2 class="font-cinzel text-3xl md:text-4xl text-light-gold tracking-widest uppercase text-center px-4">
-                    Beyond Lab</h2>
-                <div class="h-px bg-gold w-16 md:w-48"></div>
-            </div>
+        <!-- Educational Background -->
+        <section id="education" class="pt-6">
+            <h3 class="font-cinzel text-center text-sm md:text-base tracking-[0.2em] text-white uppercase bg-civ-dark inline-block px-4 relative z-10 mx-auto left-1/2 transform -translate-x-1/2">Educational Background</h3>
+            <div class="loading-divider" style="margin-top: -0.7rem;"></div>
 
-            <div class="flex justify-center">
-                <div class="civ-card p-10 space-y-5 max-w-3xl w-full flex flex-col items-center">
-                    <h3 class="font-cinzel text-3xl text-gold border-b-2 border-gold-dark pb-2 inline-block">
-                        Birdwatching</h3>
-                    <p class="font-cormorant text-xl text-parchment leading-relaxed text-justify md:text-center mt-2">
-                        As a dedicated birdwatching enthusiast, I immerse myself in the intricate patterns of the
-                        natural world. Patient observation of nature's delicate mechanisms brings a profound sense of
-                        balance to my scientific pursuits, grounding my understanding of complex systems and finding
-                        rhythm outside the laboratory.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto rounded-full civ-logo-container mb-3 transition group-hover:border-gold">
+                        <img src="nus_logo.jpg" class="w-full h-full object-contain rounded-full scale-110">
+                    </div>
+                    <h4 class="font-cinzel text-gold">NUS</h4>
+                    <p class="font-cormorant text-sm text-gray-400">B.Sc. in Physics (2024-2028)</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto rounded-full civ-logo-container mb-3 transition group-hover:border-gold">
+                        <img src="cornell_logo.jpg" class="w-full h-full object-contain rounded-full">
+                    </div>
+                    <h4 class="font-cinzel text-gold">Cornell</h4>
+                    <p class="font-cormorant text-sm text-gray-400">Exchange (Fa 2026)</p>
+                </div>
+                <div class="text-center group md:col-span-2">
+                    <div class="w-20 h-20 mx-auto rounded-full civ-logo-container mb-3 transition group-hover:border-gold">
+                        <img src="gdsyzx_logo.jpg" class="w-full h-full object-contain rounded-full scale-110">
+                    </div>
+                    <h4 class="font-cinzel text-gold">Guangdong Experimental</h4>
+                    <p class="font-cormorant text-sm text-gray-400">2018 - 2024</p>
                 </div>
             </div>
         </section>
+
+        <div class="loading-divider-strong"></div>
+
+        <div class="text-center pb-20">
+            <h4 class="font-cinzel text-sm text-gray-400 tracking-widest uppercase mb-6">Loading, Please Wait...</h4>
+        </div>
     </main>
 
-    <!-- Next Turn Button (Fixed at Bottom Right) -->
-    <div class="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-50">
-        <a href="mailto:weixihuang@u.nus.edu"
-            class="next-turn-btn relative flex items-center justify-center w-24 h-24 md:w-32 md:h-32 rounded-full cursor-pointer">
-            <div class="flex flex-col items-center justify-center z-10 text-center">
-                <span
-                    class="font-cinzel text-gold text-sm md:text-base font-bold tracking-widest leading-tight">CONTACT<br>ME</span>
-                <svg class="w-6 h-6 md:w-8 md:h-8 text-gold mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
+    <!-- Next Turn Authentic Button -->
+    <div class="fixed bottom-6 right-6 lg:bottom-12 lg:right-12 z-[100]">
+        <a href="mailto:weixihuang@u.nus.edu" class="turn-btn-wrap group">
+            <div class="turn-ring-outer"></div>
+            <div class="turn-ring-dashed"></div>
+            <div class="turn-btn-core"></div>
+            <div class="turn-btn-content">
+                <span class="font-cinzel text-gold text-sm md:text-base font-bold tracking-[0.2em] leading-tight group-hover:text-white transition-colors duration-300">CONTACT</span>
+                <span class="font-cinzel text-light-gold text-xs font-bold tracking-[0.3em] leading-tight group-hover:text-white transition-colors duration-300">ME</span>
             </div>
         </a>
     </div>
 
-    <script>
-        // Mobile menu toggle script
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const navLinks = menu.querySelectorAll('a');
+    <!-- Civ VI Style Modal for "No Content" -->
+    <div id="no-content-modal" class="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-all duration-300 backdrop-blur-sm">
+        <div class="relative bg-civ-dark border-2 border-gold max-w-sm w-full mx-4 p-8 shadow-2xl flex flex-col items-center text-center space-y-5 transform scale-95 transition-all duration-300">
+            <!-- Decorative Corners -->
+            <div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-light-gold"></div>
+            <div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-light-gold"></div>
+            <div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-light-gold"></div>
+            <div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-light-gold"></div>
+            
+            <h3 class="font-cinzel text-lg text-gold tracking-widest uppercase">Research Details</h3>
+            <div class="loading-divider !my-2"></div>
+            <p class="font-cormorant text-lg text-slate-300">No content available</p>
+            <div class="loading-divider !my-2"></div>
+            <button onclick="closeNoContentModal()" class="px-6 py-1.5 border border-gold text-gold font-cinzel text-xs tracking-widest hover:bg-gold/10 transition-colors duration-200 uppercase">Close</button>
+        </div>
+    </div>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+    <!-- Civ VI Style Modal for PDF Viewer -->
+    <div id="pdf-modal" class="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 opacity-0 pointer-events-none transition-all duration-300 backdrop-blur-sm">
+        <div class="relative bg-civ-dark border-2 border-gold max-w-4xl w-full h-[90vh] mx-4 p-6 shadow-2xl flex flex-col space-y-4 transform scale-95 transition-all duration-300">
+            <!-- Decorative Corners -->
+            <div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-light-gold"></div>
+            <div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-light-gold"></div>
+            <div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-light-gold"></div>
+            <div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-light-gold"></div>
+            
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-gold/30 pb-3">
+                <h3 class="font-cinzel text-lg text-gold tracking-widest uppercase">Project Slides</h3>
+                <div class="flex items-center space-x-4">
+                    <a id="pdf-download-btn" href="#" download class="px-4 py-1.5 border border-gold/60 text-gold font-cinzel text-xs tracking-widest hover:bg-gold/10 transition-colors duration-200 uppercase">Download PDF</a>
+                    <button onclick="closePdfModal()" class="text-gold hover:text-light-gold font-cinzel text-2xl leading-none">&times;</button>
+                </div>
+            </div>
+            
+            <!-- Loading Indicator -->
+            <div id="pdf-loading" class="flex-1 flex flex-col items-center justify-center space-y-3">
+                <div class="w-12 h-12 border-4 border-gold border-t-transparent rounded-full animate-spin"></div>
+                <p class="font-cinzel text-sm text-gold tracking-widest uppercase">Loading Slides...</p>
+            </div>
+
+            <!-- Canvas Container for PDF Pages -->
+            <div id="pdf-canvas-container" class="flex-1 overflow-y-auto space-y-4 pr-2 hidden">
+                <!-- Canvases will be dynamically appended here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+        let pdfDoc = null;
+
+        function showNoContentModal() {
+            const modal = document.getElementById('no-content-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            const contentBox = modal.querySelector('.transform');
+            contentBox.classList.remove('scale-95');
+            contentBox.classList.add('scale-100');
+        }
+
+        function closeNoContentModal() {
+            const modal = document.getElementById('no-content-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            const contentBox = modal.querySelector('.transform');
+            contentBox.classList.remove('scale-100');
+            contentBox.classList.add('scale-95');
+        }
+
+        function showPdfModal(pdfUrl) {
+            const modal = document.getElementById('pdf-modal');
+            const canvasContainer = document.getElementById('pdf-canvas-container');
+            const loadingIndicator = document.getElementById('pdf-loading');
+            const downloadBtn = document.getElementById('pdf-download-btn');
+
+            downloadBtn.href = pdfUrl;
+
+            // Show modal
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            const contentBox = modal.querySelector('.transform');
+            contentBox.classList.remove('scale-95');
+            contentBox.classList.add('scale-100');
+
+            // Clear previous canvases
+            canvasContainer.innerHTML = '';
+            canvasContainer.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+
+            // Load PDF
+            pdfjsLib.getDocument(pdfUrl).promise.then(async (pdf) => {
+                pdfDoc = pdf;
+                
+                // Show content container and hide loading
+                canvasContainer.classList.remove('hidden');
+                loadingIndicator.classList.add('hidden');
+                
+                // Loop through all pages and render them
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    await renderPdfPage(pdf, pageNum, canvasContainer);
+                }
+            }).catch(err => {
+                console.error('Error loading PDF:', err);
+                loadingIndicator.innerHTML = `
+                    <p class="font-cinzel text-sm text-red-500 tracking-widest uppercase mb-2">Failed to load PDF</p>
+                    <a href="${pdfUrl}" target="_blank" class="px-4 py-1.5 border border-gold text-gold font-cinzel text-xs tracking-widest hover:bg-gold/10 transition-colors duration-200 uppercase">Open PDF Directly</a>
+                `;
+            });
+        }
+
+        async function renderPdfPage(pdf, pageNum, container) {
+            const page = await pdf.getPage(pageNum);
+            
+            // Calculate scale to fit container width nicely
+            const containerWidth = container.clientWidth || 800;
+            const unscaledViewport = page.getViewport({ scale: 1.0 });
+            // Let's use container width minus padding to scale
+            const scale = (containerWidth - 24) / unscaledViewport.width;
+            const viewport = page.getViewport({ scale: Math.max(scale, 0.8) });
+
+            const canvas = document.createElement('canvas');
+            canvas.className = 'w-full max-w-full mx-auto border border-gold/20 shadow-md mb-4 bg-white';
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            container.appendChild(canvas);
+
+            await page.render({
+                canvasContext: context,
+                viewport: viewport
+            }).promise;
+        }
+
+        function closePdfModal() {
+            const modal = document.getElementById('pdf-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            const contentBox = modal.querySelector('.transform');
+            contentBox.classList.remove('scale-100');
+            contentBox.classList.add('scale-95');
+        }
+
+        // Close modal when clicking outside content box
+        document.getElementById('no-content-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeNoContentModal();
+            }
         });
 
-        // Close mobile menu when clicking a link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+        // Close PDF modal when clicking outside content box
+        document.getElementById('pdf-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePdfModal();
+            }
         });
     </script>
 
 </body>
-
 </html>
